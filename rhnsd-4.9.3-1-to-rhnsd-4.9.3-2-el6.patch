@@ -1,0 +1,23 @@
+diff --git a/rhnsd.spec b/rhnsd.spec
+index 8682cfd..2ca923b 100644
+--- a/rhnsd.spec
++++ b/rhnsd.spec
+@@ -5,7 +5,7 @@ Source0: https://fedorahosted.org/releases/s/p/spacewalk/%{name}-%{version}.tar.
+ URL:     https://fedorahosted.org/spacewalk
+ Name: rhnsd
+ Version: 4.9.3
+-Release: 1%{?dist}
++Release: 2%{?dist}
+ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
+ 
+ BuildRequires: gettext
+@@ -63,6 +63,9 @@ rm -fr $RPM_BUILD_ROOT
+ %doc LICENSE
+ 
+ %changelog
++* Wed Mar 24 2010 Jan Pazdziora <jpazdziora@redhat.com> 4.9.3-2
++- Related: #533838 - build for RHEL6
++
+ * Fri Mar 19 2010 Jan Pazdziora 4.9.3-1
+ - Check return value of regcomp, fix a memory leak (Joshua Roys)
+ 
